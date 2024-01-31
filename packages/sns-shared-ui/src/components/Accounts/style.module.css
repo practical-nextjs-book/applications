@@ -1,0 +1,21 @@
+.accounts {
+  padding: 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.user:first-child {
+  padding-top: 0;
+}
+
+.user:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}

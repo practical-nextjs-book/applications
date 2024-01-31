@@ -1,0 +1,58 @@
+.button {
+  border-radius: 9999px;
+  border: none;
+  color: white;
+  background-color: var(--gray-900);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--gray-700);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--gray-300);
+}
+
+.button:active {
+  background-color: var(--gray-800);
+  outline: 3px solid var(--gray-300);
+}
+
+.small {
+  padding: 10px;
+}
+
+.medium {
+  padding: 16px;
+}
+
+.large {
+  padding: 22px;
+}
+
+.plus::before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url('./assets/plus.svg') no-repeat center;
+}
+
+.orange {
+  background-color: var(--orange-800);
+}
+
+.orange:hover {
+  background-color: var(--orange-700);
+}
+
+.orange:focus-visible {
+  background-color: var(--orange-700);
+  outline: 3px solid var(--orange-500);
+}
+
+.orange:active {
+  background-color: var(--orange-800);
+  outline: 3px solid var(--orange-500);
+}

@@ -1,0 +1,40 @@
+.title {
+  display: block;
+  font-size: 24px;
+  font-weight: bolder;
+  color: var(--gray-800);
+}
+
+.xsmall {
+  font-size: 14px;
+}
+
+.small {
+  font-size: 18px;
+}
+
+.medium {
+  font-size: 24px;
+}
+
+.large {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .xsmall {
+    font-size: 12px;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  .medium {
+    font-size: 16px;
+  }
+
+  .large {
+    font-size: 18px;
+  }
+}

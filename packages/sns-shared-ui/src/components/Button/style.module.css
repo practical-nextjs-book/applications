@@ -1,0 +1,131 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: .4;
+}
+
+.xsmall {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.small {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.medium {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+.large {
+  padding: 18px 36px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .xsmall {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .small {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .medium {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .large {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+.black {
+  background-color: var(--black);
+}
+
+.black:hover {
+  background-color: var(--gray-800);
+}
+
+.black:focus-visible {
+  outline: 3px solid var(--orange-500);
+}
+
+.black:active {
+  background-color: var(--black);
+  outline: 3px solid var(--gray-300);
+}
+
+.orange {
+  background-color: var(--orange-800);
+}
+
+.orange:hover {
+  background-color: var(--orange-700);
+}
+
+.orange:focus-visible {
+  background-color: var(--orange-700);
+  outline: 3px solid var(--orange-500);
+}
+
+.orange:active {
+  background-color: var(--orange-800);
+  outline: 3px solid var(--orange-500);
+}
+
+.gray {
+  color: var(--gray-900);
+  border-color: var(--gray-300);
+  background-color: var(--gray-200);
+}
+
+.gray:hover {
+  border-color: var(--gray-200);
+  background-color: var(--gray-100);
+}
+
+.gray:focus-visible {
+  background-color: var(--gray-200);
+  outline: 3px solid var(--orange-500);
+}
+
+.gray:active {
+  background-color: var(--gray-200);
+  outline: 3px solid var(--gray-300);
+}
+
+.white {
+  color: var(--gray-700);
+  background-color: var(--white);
+  outline: 2px solid var(--gray-200);
+}
+
+.white:hover {
+  background-color: var(--gray-200);
+  outline: 2px solid var(--gray-400);
+}
+
+.white:focus-visible {
+  background-color: var(--gray-200);
+  outline: 2px solid var(--orange-500);
+}
+
+.white:active {
+  background-color: var(--gray-100);
+  outline: 2px solid var(--gray-400);
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "userId": "001",
+    "type": "oauth",
+    "provider": "google",
+    "providerAccountId": "012345678901234567891",
+    "refresh_token": null,
+    "access_token": null,
+    "expires_at": null,
+    "token_type": null,
+    "scope": null,
+    "id_token": null,
+    "session_state": null
+  },
+  {
+    "id": "2",
+    "userId": "002",
+    "type": "oauth",
+    "provider": "google",
+    "providerAccountId": "012345678901234567892",
+    "refresh_token": null,
+    "access_token": null,
+    "expires_at": null,
+    "token_type": null,
+    "scope": null,
+    "id_token": null,
+    "session_state": null
+  },
+  {
+    "id": "3",
+    "userId": "003",
+    "type": "oauth",
+    "provider": "google",
+    "providerAccountId": "012345678901234567893",
+    "refresh_token": null,
+    "access_token": null,
+    "expires_at": null,
+    "token_type": null,
+    "scope": null,
+    "id_token": null,
+    "session_state": null
+  }
+]

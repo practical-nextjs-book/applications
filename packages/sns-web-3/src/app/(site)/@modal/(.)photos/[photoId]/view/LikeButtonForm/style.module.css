@@ -1,0 +1,12 @@
+.likeButton {
+  display: flex;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  bottom: 16px;
+  right: 16px;
+  z-index: 3;
+  padding: 16px 32px;
+  border-radius: 64px;
+  background-color: var(--white);
+}

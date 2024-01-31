@@ -1,0 +1,46 @@
+{
+  "name": "sns-shared-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Next.js本の写真共有アプリに使用するUIライブラリ",
+  "author": "takepepe",
+  "license": "MIT",
+  "scripts": {
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "eslint-config-next": "13.4.10",
+    "next": "14.1.0",
+    "next-auth": "^5.0.0-beta.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-dropzone": "^14.2.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.2.1",
+    "@storybook/addon-interactions": "^7.2.1",
+    "@storybook/addon-links": "^7.2.1",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.2.1",
+    "@storybook/nextjs": "^7.5.3",
+    "@storybook/react": "^7.2.1",
+    "@storybook/testing-library": "^0.2.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.0",
+    "storybook": "^7.2.1",
+    "typescript": "^5.2.2"
+  }
+}

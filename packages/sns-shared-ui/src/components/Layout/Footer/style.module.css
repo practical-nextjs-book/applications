@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  border-top: 1px solid var(--gray-200);
+  font-size: 12px;
+}
+
+.copyright {
+  margin-right: 32px;
+}
+
+.list {
+  display: flex;
+  gap: 16px;
+}
+
+.list a {
+  color: var(--gray-700);
+  text-decoration: underline;
+}
+
+.list a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 4px;
+    padding: 28px 16px;
+  }
+
+  .copyright {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}

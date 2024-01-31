@@ -1,0 +1,58 @@
+.avatar {
+  display: inline-block;
+  line-height: 0;
+  background-color: var(--white);
+  background-size: cover;
+  background-position: center;
+  background-image: url('./assets/account.svg');
+}
+
+.small {
+  max-width: 32px;
+  max-height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 32px;
+}
+
+.medium {
+  max-width: 48px;
+  max-height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 48px;
+}
+
+.large {
+  max-width: 64px;
+  max-height: 64px;
+  min-width: 64px;
+  min-height: 64px;
+  border-radius: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .small {
+    max-width: 24px;
+    max-height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 24px;
+  }
+
+  .medium {
+    max-width: 36px;
+    max-height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 36px;
+  }
+
+  .large {
+    max-width: 48px;
+    max-height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    border-radius: 48px;
+  }
+}

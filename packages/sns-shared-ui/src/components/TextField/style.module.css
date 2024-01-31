@@ -1,0 +1,27 @@
+.textfield {
+  padding: 0.8em 1em;
+  font-size: 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background-color: var(--gray-100);
+}
+
+.textfield::placeholder {
+  color: var(--gray-400);
+}
+
+.textfield:disabled {
+  border-color: var(--gray-200);
+  background-color: var(--gray-50);
+}
+
+.textfield:disabled::placeholder {
+  color: var(--gray-300);
+}
+
+@media screen and (max-width: 768px) {
+  .textfield {
+    padding: 0.6em 0.8em;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,50 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Category {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  name          String    @unique
+  label         String
+  description   String
+  imageUrl      String
+  photos        Photo[]
+}
+
+model Photo {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  title         String
+  description   String
+  imageUrl      String
+  authorId      String
+  categoryId    String
+  category      Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  likes         Like[]
+  comments      Comment[]
+}
+
+model Like {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  userId        String
+  photoId       String
+  photo         Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, photoId])
+}
+
+model Comment {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  authorId      String
+  photoId       String
+  photo         Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  comment       String
+}

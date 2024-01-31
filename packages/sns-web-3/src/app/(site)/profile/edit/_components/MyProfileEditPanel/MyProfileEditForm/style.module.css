@@ -1,0 +1,15 @@
+.module {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+@media screen and (max-width: 768px) {
+  .module {
+    width: 100%;
+    flex-direction: column;
+    padding: 16px;
+  }
+}

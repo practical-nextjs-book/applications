@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+}
+
+.photos {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.aside {
+  max-width: 384px;
+  min-width: 384px;
+  border-left: 1px solid var(--gray-200);
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .aside {
+    max-width: inherit;
+    min-width: inherit;
+  }
+}

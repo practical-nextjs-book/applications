@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "name": "flower",
+    "label": "花",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00301.jpg"
+  },
+  {
+    "id": "2",
+    "name": "ornament",
+    "label": "雑貨",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00105.jpg"
+  },
+  {
+    "id": "3",
+    "name": "vehicle",
+    "label": "乗り物",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/01517.jpg"
+  },
+  {
+    "id": "4",
+    "name": "nature",
+    "label": "自然",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00204.jpg"
+  },
+  {
+    "id": "5",
+    "name": "animal",
+    "label": "動物",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00901.jpg"
+  },
+  {
+    "id": "6",
+    "name": "landscape",
+    "label": "風景",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00705.jpg"
+  },
+  {
+    "id": "7",
+    "name": "travel",
+    "label": "旅行",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/01510.jpg"
+  },
+  {
+    "id": "8",
+    "name": "gourmet",
+    "label": "グルメ",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00500.jpg"
+  },
+  {
+    "id": "9",
+    "name": "theme-park",
+    "label": "テーマパーク",
+    "description": "description",
+    "imageUrl": "http://127.0.0.1:9000/photos/00210.jpg"
+  }
+]

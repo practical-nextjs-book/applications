@@ -1,0 +1,32 @@
+.textarea {
+  padding: 0.8em 1em;
+  font-size: 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background-color: var(--gray-100);
+  resize: none;
+}
+
+.textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.textarea:disabled {
+  border-color: var(--gray-200);
+  background-color: var(--gray-50);
+}
+
+.textarea:disabled::placeholder {
+  color: var(--gray-300);
+}
+
+.resize {
+  resize: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .textarea {
+    padding: 0.6em 0.8em;
+    font-size: 14px;
+  }
+}

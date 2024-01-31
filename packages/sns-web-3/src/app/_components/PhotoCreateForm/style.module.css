@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.photo {
+  aspect-ratio: 3 / 2;
+  background-position: center;
+  background-size: cover;
+}
+
+.area {
+  display: flex;
+  min-height: 480px;
+  aspect-ratio: 3 / 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px dashed var(--gray-200);
+  border-radius: var(--border-radius);
+  background: no-repeat center var(--gray-100);
+  background-size: contain;
+  transition-duration: 0.2s;
+}
+
+.dragActive {
+  color: #ffffff;
+  background-color: var(--gray-900);
+}
+
+
+@media screen and (max-width: 768px) {
+  .form {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .photo {
+    font-size: 12px;
+  }
+
+  .area {
+    min-height: 240px;
+  }
+}

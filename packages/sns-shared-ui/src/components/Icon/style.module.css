@@ -1,0 +1,137 @@
+.icon::before {
+  content: '';
+  display: block;
+  mask: no-repeat center;
+  mask-size: contain;
+  /* https://github.com/RyanClementsHax/storybook-addon-next/issues/112 */
+  -webkit-mask: no-repeat center;
+  -webkit-mask-size: contain;
+}
+
+.xsmall::before {
+  width: 16px;
+  height: 16px;
+}
+
+.small::before {
+  width: 24px;
+  height: 24px;
+}
+
+.medium::before {
+  width: 36px;
+  height: 36px;
+}
+
+.large::before {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .xsmall::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .small::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .medium::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .large::before {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.black::before {
+  background-color: var(--gray-900);
+}
+
+.gray::before {
+  background-color: var(--gray-500);
+}
+
+.orange::before {
+  background-color: var(--orange-800);
+}
+
+.white::before {
+  background-color: var(--white);
+}
+
+.account::before {
+  mask-image: url('./assets/account.svg');
+  -webkit-mask-image: url('./assets/account.svg');
+}
+
+.alert::before {
+  mask-image: url('./assets/alert.svg');
+  -webkit-mask-image: url('./assets/alert.svg');
+}
+
+.camera::before {
+  mask-image: url('./assets/camera.svg');
+  -webkit-mask-image: url('./assets/camera.svg');
+}
+
+.comments::before {
+  mask-image: url('./assets/comments.svg');
+  -webkit-mask-image: url('./assets/comments.svg');
+}
+
+.gear::before {
+  mask-image: url('./assets/gear.svg');
+  -webkit-mask-image: url('./assets/gear.svg');
+}
+
+.heart-border::before {
+  mask-image: url('./assets/heart-border.svg');
+  -webkit-mask-image: url('./assets/heart-border.svg');
+}
+
+.heart::before {
+  mask-image: url('./assets/heart.svg');
+  -webkit-mask-image: url('./assets/heart.svg');
+}
+
+.home::before {
+  mask-image: url('./assets/home.svg');
+  -webkit-mask-image: url('./assets/home.svg');
+}
+
+.paper-plane::before {
+  mask-image: url('./assets/paper-plane.svg');
+  -webkit-mask-image: url('./assets/paper-plane.svg');
+}
+
+.photos::before {
+  mask-image: url('./assets/photos.svg');
+  -webkit-mask-image: url('./assets/photos.svg');
+}
+
+.trash-box::before {
+  mask-image: url('./assets/trash-box.svg');
+  -webkit-mask-image: url('./assets/trash-box.svg');
+}
+
+.upload::before {
+  mask-image: url('./assets/upload.svg');
+  -webkit-mask-image: url('./assets/upload.svg');
+}
+
+.user::before {
+  mask-image: url('./assets/user.svg');
+  -webkit-mask-image: url('./assets/user.svg');
+}
+
+.zoom::before {
+  mask-image: url('./assets/zoom.svg');
+  -webkit-mask-image: url('./assets/zoom.svg');
+}

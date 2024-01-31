@@ -1,0 +1,14 @@
+{
+  "name": "ps-web",
+  "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "workspaces": [
+    "packages/sns-api-1",
+    "packages/sns-shared-ui",
+    "packages/sns-web-1",
+    "packages/sns-web-2",
+    "packages/sns-web-3"
+  ]
+}

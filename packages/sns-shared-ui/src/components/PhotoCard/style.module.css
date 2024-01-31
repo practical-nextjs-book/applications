@@ -1,0 +1,132 @@
+.card {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
+  background: center no-repeat;
+  background-size: cover;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.wide {
+  aspect-ratio: 3 / 2;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.portrait {
+  aspect-ratio: 2 / 3;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+
+/* 
+
+.meta
+
+*/
+
+.meta {
+  width: 100%;
+  padding: 16px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, .85);
+}
+
+.meta.animate {
+  transform: translateY(100%);
+  transition-duration: .2s;
+}
+
+.card:hover .meta.animate {
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.description {
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.lineClamp1 {
+  -webkit-line-clamp: 1;
+}
+
+.lineClamp2 {
+  -webkit-line-clamp: 2;
+}
+
+.lineClamp3 {
+  -webkit-line-clamp: 3;
+}
+
+.lineClamp4 {
+  -webkit-line-clamp: 4;
+}
+
+.actionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: rgba(255, 255, 255, .65);
+  border: none;
+  cursor: pointer;
+}
+
+.actionIcon span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.actionIcon.animate {
+  transform: scale(0.8);
+  transition-duration: .2s;
+}
+
+.actionIcon.animate:hover {
+  transform: scale(1);
+  background-color: rgba(255, 255, 255, .95);
+}

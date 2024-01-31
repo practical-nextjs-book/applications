@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "name": "テスト太郎",
+    "email": "test-user+001@gmail.com",
+    "emailVerified": null,
+    "image": null,
+    "profileId": "001"
+  },
+  {
+    "id": "002",
+    "name": "テスト次郎",
+    "email": "test-user+002@gmail.com",
+    "emailVerified": null,
+    "image": null,
+    "profileId": "002"
+  },
+  {
+    "id": "003",
+    "name": "テスト花子",
+    "email": "test-user+003@gmail.com",
+    "emailVerified": null,
+    "image": null,
+    "profileId": "002"
+  }
+]

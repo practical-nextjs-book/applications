@@ -1,0 +1,67 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.pagination li {
+  user-select: none;
+}
+
+.pagination li a,
+.pagination li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--gray-300);
+  border-left: none;
+  background-color: var(--gray-100);
+}
+
+.pagination li:first-child a {
+  border-left: 1px solid var(--gray-300);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.pagination li:last-child a {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.pagination li a:hover {
+  background-color: var(--gray-200);
+}
+
+.pagination li a[aria-current="page"] {
+  background-color: var(--gray-200);
+}
+
+.prev a::before {
+  content: "";
+  width: 6px;
+  height: 11px;
+  background: url('./assets/arrow-left.svg') no-repeat;
+  display: block;
+}
+
+.next a::before {
+  content: "";
+  width: 6px;
+  height: 11px;
+  background: url('./assets/arrow-right.svg') no-repeat;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+
+  .pagination li a,
+  .pagination li span {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}

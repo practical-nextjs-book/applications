@@ -1,0 +1,17 @@
+.root {
+  max-width: 1600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    max-width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}

@@ -1,0 +1,36 @@
+.select {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.select::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  top: 1.2em;
+  right: 1.2em;
+  background: url('./assets/arrow.svg');
+}
+
+.select>select {
+  width: 100%;
+  padding: 0.8em 1.2em;
+  font-size: 16px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background-color: var(--gray-100);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.select>select:disabled {
+  border-color: var(--gray-200);
+  background-color: var(--gray-50);
+}
+
+.select>select:has([value=""]:checked) {
+  color: var(--gray-400);
+}

@@ -1,0 +1,27 @@
+.commentBox {
+  display: flex;
+  padding: 8px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+}
+
+.commentBox input {
+  flex-grow: 1;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.commentBox button {
+  padding: 1em;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.commentBox button:hover {
+  opacity: 0.5;
+}

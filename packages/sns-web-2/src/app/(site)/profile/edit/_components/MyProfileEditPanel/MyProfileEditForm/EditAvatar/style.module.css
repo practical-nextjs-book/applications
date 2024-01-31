@@ -1,0 +1,42 @@
+.photo {
+  position: relative;
+  width: 196px;
+  height: 196px;
+  border-radius: 9999px;
+  overflow: hidden;
+  background-color: black;
+}
+
+.upload {
+  width: 196px;
+  height: 196px;
+  background-size: cover;
+  background-position: center;
+  transition-duration: .2s;
+}
+
+.photo:hover .upload {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0;
+  transition-duration: .2s;
+}
+
+.photo:hover .icon {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .upload {
+    width: 128px;
+    height: 128px;
+  }
+}

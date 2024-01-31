@@ -1,0 +1,36 @@
+.page {
+  width: 960px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.page h1,
+.page h2,
+.page p {
+  margin-bottom: 16px;
+}
+
+.list {
+  padding: 16px;
+}
+
+.list li::before {
+  content: "・";
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    width: auto;
+    padding: 24px;
+  }
+
+  .page h1,
+  .page h2,
+  .page p {
+    margin-bottom: 8px;
+  }
+
+  .list {
+    padding: 8px;
+  }
+}

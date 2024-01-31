@@ -1,0 +1,39 @@
+.module {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.photo {
+  display: grid;
+  justify-items: center;
+}
+
+.photo img {
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.meta {
+  flex-grow: 1;
+  padding: 32px;
+}
+
+.bio {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-200);
+}
+
+@media screen and (max-width: 768px) {
+  .module {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo img {
+    width: 128px;
+    height: 128px;
+  }
+}

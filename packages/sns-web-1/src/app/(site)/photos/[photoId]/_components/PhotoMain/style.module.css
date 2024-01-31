@@ -1,0 +1,26 @@
+.content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-top: 1px solid var(--gray-200);
+}
+
+.meta {
+  border-right: 1px solid var(--gray-200);
+}
+
+.user:hover p {
+  color: var(--orange-800);
+}
+
+.ownerActions {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}

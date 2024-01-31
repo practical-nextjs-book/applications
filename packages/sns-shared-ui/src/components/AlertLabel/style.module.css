@@ -1,0 +1,10 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  margin: 16px;
+  background-color: var(--orange-50);
+  border: 1px solid var(--orange-300);
+  border-radius: var(--border-radius);
+}

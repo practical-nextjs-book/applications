@@ -1,0 +1,41 @@
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row label {
+  margin-bottom: 4px;
+}
+
+.title,
+.description {
+  width: 380px;
+}
+
+.description {
+  height: 11em;
+}
+
+.select {
+  width: 240px;
+}
+
+@media screen and (max-width: 768px) {
+  .meta {
+    gap: 8px;
+  }
+
+  .title,
+  .description {
+    width: 100%;
+  }
+
+  .description {
+    height: 5em;
+  }
+
+  .select {
+    width: 240px;
+  }
+}

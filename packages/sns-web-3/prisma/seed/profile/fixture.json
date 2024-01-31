@@ -1,0 +1,20 @@
+[
+  {
+    "id": "001",
+    "bio": "自己紹介 テスト太郎",
+    "screenName": "test-taro",
+    "userId": "001"
+  },
+  {
+    "id": "002",
+    "bio": "自己紹介 テスト次郎",
+    "screenName": "test-jiro",
+    "userId": "002"
+  },
+  {
+    "id": "003",
+    "bio": "自己紹介 テスト花子",
+    "screenName": "test-hanako",
+    "userId": "003"
+  }
+]

@@ -1,0 +1,13 @@
+.meta {
+  border-right: 1px solid var(--gray-200);
+}
+
+.user:hover p {
+  color: var(--orange-800);
+}
+
+.ownerActions {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+}
