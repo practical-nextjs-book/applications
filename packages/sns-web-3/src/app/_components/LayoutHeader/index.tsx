@@ -8,7 +8,7 @@ type Props = {
 };
 
 export function LayoutHeader({ showDrawerMenu }: Props) {
-  // 📌: Client レンダリングを活用することで静的レンダリング領域を増やす
+  // ★: Client レンダリングを活用することで静的レンダリング領域を増やす
   const { data: session } = useSession();
   return (
     <Layout.Header

@@ -22,7 +22,7 @@ export function getPhotos({
   });
   // ✅ 手前に動的関数があっても、静的取得になる
   return fetch(path(`/api/photos?${searchParams}`), {
-    cache: "force-cache", // 📌
+    cache: "force-cache", // ★
     next: {
       ...(authorId && { tags: [`photos?authorId=${authorId}`] }),
       ...(revalidate !== undefined && { revalidate }),

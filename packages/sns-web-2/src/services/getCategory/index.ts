@@ -14,7 +14,7 @@ export async function getCategory({
   const searchParams = new URLSearchParams({ page, take });
   return fetch(path(`/api/categories/${categoryName}?${searchParams}`), {
     cache: "no-store",
-    next: { tags: ["categories"] }, // 📌: 抽象的な tag
+    next: { tags: ["categories"] }, // ★: 抽象的な tag
   })
     .then(handleSucceed)
     .catch(handleFailed);

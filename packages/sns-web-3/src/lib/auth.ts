@@ -47,6 +47,6 @@ export const authOptions: NextAuthOptions = {
 };
 
 export const getServerSession = cache(async () => {
-  // 📌: リクエストメモ化を忘れないように
+  // ★: リクエストメモ化を忘れないように
   return originalGetServerSession(authOptions);
 });

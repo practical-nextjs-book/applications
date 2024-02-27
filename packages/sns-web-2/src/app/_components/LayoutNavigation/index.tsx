@@ -35,7 +35,7 @@ export function LayoutNavigation({ session, categories }: Props) {
           ))}
         </li>
         <li className={styles.listitem}>
-          {/* 📌 ログイン済みの場合モーダルを開き、未ログインの場合ログイン画面へ */}
+          {/* ★ ログイン済みの場合モーダルを開き、未ログインの場合ログイン画面へ */}
           {session?.user ? (
             <PhotoCreateModalContainer categories={categories}>
               <span className={clsx(styles.listitemChild, linkClassName)}>

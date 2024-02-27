@@ -17,10 +17,10 @@ type Props = {
 };
 
 export function ClientLayoutNavigation({ categories }: Props) {
-  // 📌: Client レンダリングを活用することで静的レンダリング領域を増やす
+  // ★: Client レンダリングを活用することで静的レンダリング領域を増やす
   const { data: session } = useSession();
   const currentPathname = usePathname();
-  // 📌: next/font で生成されたクラス名を取得する
+  // ★: next/font で生成されたクラス名を取得する
   const linkClassName = roboto.className;
   return (
     <Layout.Navigation
@@ -36,7 +36,7 @@ export function ClientLayoutNavigation({ categories }: Props) {
         ))}
       </li>
       <li className={styles.listitem}>
-        {/* 📌 ログイン済みの場合モーダルを開き、未ログインの場合ログイン画面へ */}
+        {/* ★ ログイン済みの場合モーダルを開き、未ログインの場合ログイン画面へ */}
         {session?.user ? (
           <PhotoCreateModalContainer
             categories={categories}

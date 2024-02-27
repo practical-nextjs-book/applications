@@ -41,9 +41,9 @@ export async function updatePhoto(prevState: FormState, formData: FormData) {
     }
     const { photo } = await postPhotoEdit({ ...payload, userId });
     photoId = photo.id;
-    // 📌: 対象の投稿写真画面キャッシュを Revalidate
+    // ★: 対象の投稿写真画面キャッシュを Revalidate
     revalidatePath(`/photos/${photoId}`);
-    // 📌: 抽象的なタグの Revalidate
+    // ★: 抽象的なタグの Revalidate
     revalidateTag("categories");
   } catch (err) {
     if (err instanceof FetchError) {

@@ -123,7 +123,7 @@ export function PhotoForm({ photo, categories }: Props) {
       // Client バリデーションエラーをクリア
       setClientErrors(undefined);
     } catch (err) {
-      // 📌: Form のサブミット（action 実行）を中止
+      // ★: Form のサブミット（action 実行）を中止
       event.preventDefault();
       if (!(err instanceof ZodError)) throw err;
       // Zod のバリデーションエラーをマッピング

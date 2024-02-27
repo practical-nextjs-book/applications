@@ -17,9 +17,9 @@ export async function deletePhotoAction(photoId: string): Promise<{
   try {
     // 【4】削除リクエストを Web API サーバーに送信
     await deletePhoto({ photoId, userId: session.user.id });
-    // 📌 投稿写真画面を Not Found にするため
+    // ★ 投稿写真画面を Not Found にするため
     revalidatePath(`/photos/${photoId}`);
-    // 📌 投稿写真一覧を更新するため
+    // ★ 投稿写真一覧を更新するため
     revalidateTag(`photos?authorId=${session.user.id}`);
   } catch (err) {
     // 【8】削除結果を Client Component に返す

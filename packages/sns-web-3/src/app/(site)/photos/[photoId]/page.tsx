@@ -41,7 +41,7 @@ export default async function Page({ params }: Props) {
   // 【4】カテゴリー情報を取得
   // 【5】いいね済みか否かを取得
   const [author, { category }, { liked }] = await Promise.all([
-    // 📌1: unstable_cache で fetch 関数のように Data キャッシュを使用する
+    // ★1: unstable_cache で fetch 関数のように Data キャッシュを使用する
     unstable_cache(
       (id: string) => {
         return prisma.user.findUnique({
@@ -84,5 +84,5 @@ export default async function Page({ params }: Props) {
   );
 }
 
-// 📌2: このページの fetch関数はデフォルトで`{ cache: "force-cache" }`とする
+// ★2: このページの fetch関数はデフォルトで`{ cache: "force-cache" }`とする
 export const fetchCache = "force-cache";

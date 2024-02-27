@@ -11,7 +11,7 @@ import { errors, handleError } from "./state";
 import { transformFiledErrors, validateFormData } from "./validate";
 import type { FormState } from "./state";
 
-// 📌: 更新前後の categoryName を取得
+// ★: 更新前後の categoryName を取得
 async function getNextPrevCategoryName(
   prevCategoryId: string,
   nextCategoryId: string,
@@ -41,22 +41,22 @@ export async function updatePhoto(
   const userId = session.user.id;
   let photoId = "";
   try {
-    // 📌: バリデーションエラーが発生した場合 catch 句へ
+    // ★: バリデーションエラーが発生した場合 catch 句へ
     const payload = validateFormData(formData);
-    // 📌: Revalidate 対象のカテゴリー名を取得
+    // ★: Revalidate 対象のカテゴリー名を取得
     const { prevCategoryName, nextCategoryName } =
       await getNextPrevCategoryName(prevState.categoryId, payload.categoryId);
     // Web API サーバーへの更新リクエスト
     const { photo } = await postPhotoEdit({ ...payload, userId });
     photoId = photo.id;
-    // 📌: 対象の投稿写真画面キャッシュを Revalidate
+    // ★: 対象の投稿写真画面キャッシュを Revalidate
     revalidatePath(`/photos/${photoId}`);
-    // 📌: プロフィール画面の写真一覧キャッシュを Revalidate
+    // ★: プロフィール画面の写真一覧キャッシュを Revalidate
     revalidateTag(`photos?authorId=${userId}`);
-    // 📌: 更新後のカテゴリー一覧キャッシュを Revalidate
+    // ★: 更新後のカテゴリー一覧キャッシュを Revalidate
     revalidateTag(`categories/${prevCategoryName}`);
     if (prevCategoryName !== nextCategoryName) {
-      // 📌: カテゴリー変更先の一覧キャッシュを Revalidate
+      // ★: カテゴリー変更先の一覧キャッシュを Revalidate
       revalidateTag(`categories/${nextCategoryName}`);
     }
   } catch (err) {
@@ -66,7 +66,7 @@ export async function updatePhoto(
         status: err.status,
       });
     }
-    // 📌: Zod のバリデーションエラーをマッピング
+    // ★: Zod のバリデーションエラーをマッピング
     if (err instanceof ZodError) {
       return handleError(prevState, {
         ...errors[400],

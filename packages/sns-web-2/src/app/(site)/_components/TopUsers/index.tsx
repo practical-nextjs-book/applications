@@ -11,7 +11,7 @@ type TopUsersProps = {
       screenName: string | null;
     } | null;
     id: string;
-    name: string | null; // 📌: ここに型互換エラーが発生
+    name: string | null; // ★: ここに型互換エラーが発生
     image: string | null;
   }[];
 };

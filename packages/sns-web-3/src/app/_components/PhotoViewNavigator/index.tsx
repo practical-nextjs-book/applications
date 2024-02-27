@@ -16,13 +16,13 @@ export function PhotoViewNavigator({ photoId }: { photoId: string }) {
 
   useKey("ArrowLeft", () => {
     if (prevPhotoId) {
-      // 📌: ソフトナビーゲーションによる画面遷移
+      // ★: ソフトナビーゲーションによる画面遷移
       router.replace(`/photos/${prevPhotoId}/view`, { scroll: false });
     }
   });
   useKey("ArrowRight", () => {
     if (nextPhotoId) {
-      // 📌: ソフトナビーゲーションによる画面遷移
+      // ★: ソフトナビーゲーションによる画面遷移
       router.replace(`/photos/${nextPhotoId}/view`, { scroll: false });
     }
   });

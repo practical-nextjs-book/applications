@@ -23,7 +23,7 @@ function AlertDialogModalComponent({
     if (!buttonRef.current) return;
     buttonRef.current.focus();
   }, []);
-  // 📌 form 要素の子コンポーネントで使用する
+  // ★ form 要素の子コンポーネントで使用する
   const { pending } = useFormStatus();
   // 状態に応じてメッセージを切り替える
   const message = pending
@@ -57,7 +57,7 @@ export function PhotoDeleteForm({ id, closeModal }: Props) {
   const handleAction = async () => {
     // 【2】削除 Server Action を呼ぶ
     const err = await deletePhotoAction(id);
-    // 📌 router.refresh(); と router.push(); が不要
+    // ★ router.refresh(); と router.push(); が不要
     if (err) {
       // 【9】戻り値がある場合はエラー文字切り替え
       setError(err.message);

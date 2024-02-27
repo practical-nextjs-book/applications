@@ -35,7 +35,7 @@ function useOptimisticUpdate({
   const formRef = useRef<HTMLFormElement>(null);
   // 【1】親から渡されたコメント一覧初期値を状態に保持
   const [comments, setComments] = useState(defaultComments);
-  // 📌 一覧表示に使用する optimisticComments
+  // ★ 一覧表示に使用する optimisticComments
   const [optimisticComments, addOptimisticComment] = useOptimistic(
     comments,
     (prevComments, newComment: Comment) => {

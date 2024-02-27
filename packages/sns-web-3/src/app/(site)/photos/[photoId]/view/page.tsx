@@ -5,7 +5,7 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  // 📌: Parallel Routes & Intercepting Routes による
+  // ★: Parallel Routes & Intercepting Routes による
   // モーダル表示のみを期待しているため redirect
   redirect(`/photos/${params.photoId}`);
 }

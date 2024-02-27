@@ -43,7 +43,7 @@ async function getCategoryFromProps({ params }: Props) {
     typeof params.segments[0] === "string" ? params.segments[0] : "1";
   const page =
     typeof params.segments[1] === "string" ? params.segments[1] : "1";
-  // 📌: /categories/flower/1/2 などの場合は 404 を返す
+  // ★: /categories/flower/1/2 などの場合は 404 を返す
   if (params.segments.length > 2) {
     notFound();
   }
@@ -56,7 +56,7 @@ async function getCategoryFromProps({ params }: Props) {
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  // 📌: generateMetadata と Page で引数の異なる fetch 関数を呼び出さないよう注意
+  // ★: generateMetadata と Page で引数の異なる fetch 関数を呼び出さないよう注意
   const data = await getCategoryFromProps(props);
   return { title: `${data.category.label}の写真一覧 | ${SITE_NAME}` };
 }

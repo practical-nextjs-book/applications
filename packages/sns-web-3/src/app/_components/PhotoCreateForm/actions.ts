@@ -28,13 +28,13 @@ export async function postPhotoAction(payload: Payload) {
       categoryId: payload.categoryId,
       description: payload.description,
     });
-    // 📌 On-demand Revalidation
+    // ★ On-demand Revalidation
     revalidateTag(`photos?authorId=${session.user.id}`);
     photoId = photo.id;
   } catch (err) {
     // 【9】保存結果を Client Component に返す
     return { message: "Internal Server Error" };
   }
-  // 【9】📌 投稿の詳細画面へリダイレクト
+  // 【9】★ 投稿の詳細画面へリダイレクト
   redirect(`/photos/${photoId}`);
 }

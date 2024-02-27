@@ -7,7 +7,7 @@ import { Section } from "sns-shared-ui/src/components/Section";
 import { getCategories } from "@/services/getCategories";
 
 export default async function Page() {
-  // 📌 fetch 関数をラップしたデータ取得関数
+  // ★ fetch 関数をラップしたデータ取得関数
   const data = await getCategories();
   return (
     <Section>

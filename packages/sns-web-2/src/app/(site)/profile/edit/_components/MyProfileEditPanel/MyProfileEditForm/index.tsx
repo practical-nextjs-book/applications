@@ -24,7 +24,7 @@ type Props = {
 };
 
 export function MyProfileEditForm({ user, profile }: Props) {
-  // 📌 第 1 引数には Server Action、第 2 引数には初期状態を渡す
+  // ★ 第 1 引数には Server Action、第 2 引数には初期状態を渡す
   const [formState, formDispatch] = useFormState(updateUser, initialFormState);
   return (
     <form action={formDispatch}>

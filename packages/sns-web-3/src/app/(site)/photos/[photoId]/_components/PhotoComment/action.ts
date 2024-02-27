@@ -25,13 +25,13 @@ export async function postComment(formData: FormData): Promise<FormState> {
   const commentatorId = session.user.id;
   try {
     const { photoId, comment } = validateFormData(formData);
-    // 📌 リクエストを Web API サーバーに送信
+    // ★ リクエストを Web API サーバーに送信
     const { comment: commentData } = await postPhotoComment({
       photoId,
       comment,
       commentatorId,
     });
-    // 📌 写真投稿のコメント一覧を On-demand Revalidation
+    // ★ 写真投稿のコメント一覧を On-demand Revalidation
     revalidateTag(`photos/${photoId}/comments`);
     return handleSuccess(commentData);
   } catch (err) {

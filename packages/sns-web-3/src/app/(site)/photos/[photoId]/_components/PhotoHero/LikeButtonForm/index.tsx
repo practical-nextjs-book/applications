@@ -20,7 +20,7 @@ export function LikeButtonForm({ photo, isOwner, liked }: Props) {
   // 【1】「いいね」総数が何件か「いいね」済みか否かを、初期値として保持
   const [state, dispatch] = useFormState(
     postLike,
-    initialFormState({ liked, likedCount: photo.likedCount })
+    initialFormState({ liked, likedCount: photo.likedCount }),
   );
   return (
     <form action={dispatch}>
@@ -32,7 +32,7 @@ export function LikeButtonForm({ photo, isOwner, liked }: Props) {
       {/* 【4】送信に失敗した場合、AlertDialog を表示 */}
       {state.error && (
         <AlertDialogModalComponent
-          key={state.updatedAt} // 📌 エラーが発生するごとに再マウント、内部状態が破棄される
+          key={state.updatedAt} // ★ エラーが発生するごとに再マウント、内部状態が破棄される
           status={state.error.status}
         />
       )}

@@ -18,7 +18,7 @@ export async function UserPhotos({ screenName }: Props) {
     page: "1",
     take: "15",
     authorId: profile.user.id,
-    revalidate: 60 * 60, // 📌: 1時間キャッシュする
+    revalidate: 60 * 60, // ★: 1時間キャッシュする
   });
   return (
     <>

@@ -35,7 +35,7 @@ export async function updateUser(
   try {
     const { imageUrl, name, screenName, bio } = validateFormData(formData);
     const userId = session.user.id;
-    // 【2】📌 ユーザー情報とプロフィール情報をまとめて更新
+    // 【2】★ ユーザー情報とプロフィール情報をまとめて更新
     await prisma.$transaction([
       prisma.user.update({
         where: { id: userId },

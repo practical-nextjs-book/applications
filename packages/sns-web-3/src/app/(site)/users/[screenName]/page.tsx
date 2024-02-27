@@ -9,12 +9,12 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  // 📌: リクエスト時生成に限定する場合は空配列を返す
+  // ★: リクエスト時生成に限定する場合は空配列を返す
   return [];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // 📌: params.screenName を渡さないとリクエストメモ化が無効
+  // ★: params.screenName を渡さないとリクエストメモ化が無効
   const profile = await getProfileFromScreenName(params.screenName);
   return { title: `${profile.user.name}さんの投稿一覧 | ${SITE_NAME}` };
 }

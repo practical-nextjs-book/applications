@@ -12,7 +12,7 @@ export default async function SiteLayout({ children }: Props) {
     <Layout.Root>
       <Layout.Header />
       <Layout.Container>
-        <LayoutNavigation categories={categories} /> {/* 📌 */}
+        <LayoutNavigation categories={categories} /> {/* ★ */}
         <Layout.Main>{children}</Layout.Main>
       </Layout.Container>
       <Layout.Footer />

@@ -15,16 +15,16 @@ export const initialFormState = (
   ...initialState,
 });
 
-// 📌 いいね済み状態へと更新して返す関数
+// ★ いいね済み状態へと更新して返す関数
 export const handleSuccess = (prevState: FormState): FormState => ({
   ...prevState,
   updatedAt: Date.now().toString(),
   liked: true,
-  likedCount: prevState.likedCount + 1, // 📌 いいね数を増やす
+  likedCount: prevState.likedCount + 1, // ★ いいね数を増やす
   error: null,
 });
 
-// 📌 エラー状態へと更新して返す関数
+// ★ エラー状態へと更新して返す関数
 export const handleError = (
   prevState: FormState,
   error: {
@@ -37,7 +37,7 @@ export const handleError = (
   error,
 });
 export const errors = {
-  401: { message: "Unauthorized", status: 401 },
   400: { message: "Bad Request", status: 400 },
+  401: { message: "Unauthorized", status: 401 },
   500: { message: "Internal Server Error", status: 500 },
 };

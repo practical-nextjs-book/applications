@@ -12,14 +12,14 @@ type Props = {
 export default async function SiteLayout({ children, modal }: Props) {
   return (
     <PhotoIdsContextProvider>
-      {/* 📌 ↑: 写真拡大表示画面キーボード操作のための Provider */}
+      {/* ★ ↑: 写真拡大表示画面キーボード操作のための Provider */}
       <ClientRootLayout>
         <LayoutHeader />
         <Layout.Container>
           <LayoutNavigation />
           <Layout.Main>
             {children}
-            {/* 📌 ↓: Parallel & Intercepting Routes によるモーダル表示 */}
+            {/* ★ ↓: Parallel & Intercepting Routes によるモーダル表示 */}
             {modal}
           </Layout.Main>
         </Layout.Container>

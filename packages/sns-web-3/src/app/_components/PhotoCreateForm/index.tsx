@@ -64,13 +64,13 @@ export function PhotoCreateForm({ categories, close }: Props) {
   const handleChangeFile = (file: Blob) => {
     setPhotoData(file);
   };
-  // 【2】📌:A イベントハンドラーは action 属性向けの関数に変更
+  // 【2】★:A イベントハンドラーは action 属性向けの関数に変更
   const handleSubmit = async () => {
     if (!photoData) return;
     try {
       // 【3】アップロードした「写真 URL」を取得（A）
       const imageUrl = await uploadPhoto({ photoData });
-      // 【4】📌: Server Action を呼び出し、router.refresh(); と router.push(); を削除
+      // 【4】★: Server Action を呼び出し、router.refresh(); と router.push(); を削除
       await postPhotoAction({ imageUrl, title, categoryId, description });
     } catch (err) {
       window.alert("写真のアップロードに失敗しました");

@@ -29,7 +29,7 @@ export const handleError = (error: {
 });
 
 export const errors = {
-  401: { message: "Unauthorized", status: 401 },
   400: { message: "Bad Request", status: 400 },
+  401: { message: "Unauthorized", status: 401 },
   500: { message: "Internal Server Error", status: 500 },
 };

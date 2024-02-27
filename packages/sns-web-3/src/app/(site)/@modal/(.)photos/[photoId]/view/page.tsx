@@ -50,7 +50,7 @@ export default async function Page({ params }: Props) {
         </div>
         <footer className={styles.footer}>
           <Heading level={2} id={titleId} className={styles.title}>
-            {/* 📌: Link を増やすことで prefetch を促す */}
+            {/* ★: Link を増やすことで prefetch を促す */}
             <Link href={`/photos/${params.photoId}`} prefetch>
               {photo.title}
             </Link>
