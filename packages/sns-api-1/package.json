@@ -11,7 +11,7 @@
     "format": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
-    "next": "14.1.0",
+    "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
     "zod": "^3.21.4"
@@ -22,7 +22,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "14.2.2",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "prettier": "^3.0.0",
