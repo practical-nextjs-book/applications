@@ -9,9 +9,10 @@
     "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start -p 3003",
-    "clean-dev": "rm -rf .next/cache/fetch-cache && npm run dev",
-    "clean-build": "rm -rf .next/cache/fetch-cache && npm run build",
-    "clean-start": "rm -rf .next/cache/fetch-cache && npm run build && npm start",
+    "clean": "rimraf .next/cache/fetch-cache",
+    "clean-dev": "run-s clean dev",
+    "clean-build": "run-s clean build",
+    "clean-start": "run-s clean build start",
     "db-migrate-deploy": "prisma migrate deploy",
     "db-migrate-dev": "prisma migrate dev",
     "db-push": "prisma db push",
@@ -19,7 +20,9 @@
     "db-studio": "prisma studio",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "format": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
+    "format": "run-s format:*",
+    "format:elint": "eslint --fix './src/**/*.{js,ts,tsx}'",
+    "format:prettier": "prettier --write './src/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
