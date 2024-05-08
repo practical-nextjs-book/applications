@@ -6,9 +6,15 @@
     "dev": "next dev -p 8081",
     "build": "next build",
     "start": "next start -p 8081",
+    "clean": "rimraf .next/cache/fetch-cache",
+    "clean-dev": "run-s clean dev",
+    "clean-build": "run-s clean build",
+    "clean-start": "run-s clean build start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "format": "eslint --fix './src/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}'"
+    "format": "run-s format:*",
+    "format:elint": "eslint --fix './src/**/*.{js,ts,tsx}'",
+    "format:prettier": "prettier --write './src/**/*.{js,ts,tsx}'"
   },
   "dependencies": {
     "next": "14.2.2",
