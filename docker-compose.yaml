@@ -30,6 +30,14 @@ services:
     ports:
       - 9000:9000
       - 9001:9001
+
+  minio-setup:
+    image: minio/mc:latest
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c " sleep 10; /usr/bin/mc alias set myminio http://minio:9000 root password; /usr/bin/mc mb myminio/photos --ignore-existing; /usr/bin/mc anonymous set public myminio/photos; exit 0; "
+
 volumes:
   user_volumes:
   data_volumes:
